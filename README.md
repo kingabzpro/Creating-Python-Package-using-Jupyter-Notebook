@@ -5,6 +5,8 @@
 
 > **Creating your first data science python package straight from Jupyter Notebook.**
 
+[![View in Deepnote](https://deepnote.com/static/buttons/view-in-deepnote-white.svg)](https://deepnote.com/viewer/github/kingabzpro/Creating-Python-Package-using-Jupyter-Notebook/blob/main/python_packages.ipynb)
+
 We are going to use the cloud Jupyter Notebook to ease the setting up of the environment and completely focus on creating a package. We have also used Object Orient Programming (OOP) fundamentals like Inheritance, objects, class, magic functions, and that I won't be discussing how each part work. I am sharing my experience of creating Python packages while taking AWS Machine Learning Foundations It took me 10 minutes to create a Python package once I knew who to build it, so practice will make you better at coding packages.
 
 Have you wondered how Python packages like Scikit-learn, pandas, and NumPy are built? They are all based on OOP to create complex and easy-to-use packages. Why do data scientists need to build python packages? In modern times OOP is a necessity and it helps users to build program and share it with the public or within organizations.
