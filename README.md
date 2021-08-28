@@ -7,21 +7,23 @@
 
 [![View in Deepnote](https://deepnote.com/static/buttons/view-in-deepnote-white.svg)](https://deepnote.com/viewer/github/kingabzpro/Creating-Python-Package-using-Jupyter-Notebook/blob/main/python_packages.ipynb)
 
-We are going to use the cloud Jupyter Notebook to ease the setting up of the environment and completely focus on creating a package. We have also used Object Orient Programming (OOP) fundamentals like Inheritance, objects, class, magic functions, and that I won't be discussing how each part work. I am sharing my experience of creating Python packages while taking AWS Machine Learning Foundations It took me 10 minutes to create a Python package once I knew who to build it, so practice will make you better at coding packages.
+Have you wondered how Python packages like Scikit-learn, pandas, and NumPy are built? They are all based on Object Orient Programming (OOP) to create complex and easy-to-use packages. For a data scientist it's a necessity to learn OOP so they can use it in development of production ready products.
 
-Have you wondered how Python packages like Scikit-learn, pandas, and NumPy are built? They are all based on OOP to create complex and easy-to-use packages. Why do data scientists need to build python packages? In modern times OOP is a necessity and it helps users to build program and share it with the public or within organizations.
+We are going to use the cloud Jupyter Notebook to ease the setting up of the environment and completely focus on creating a package. The project includes fundamentals of OOP like Inheritance, objects, class, and magic functions. The project is highly influenced by AWS Machine Learning Foundations course, and it took me ten minutes to recreate the package once I knew how to build it.
 
 # Creating ***__init__.py*** Function
 
-We need to create `__init__.py` file in the distributions folder to initial the Classes within the python file. This will help us call specific classes directly.
+We need to create __init__.py file in the distributions folder to initialize the classes within the python file. This will help us call specific classes directly.
 
-We have inintaite Binomial and Gaussian class.
+We have initiated both Binomial and Gaussian class.
 
+```python
 %%writefile distributions/__init__.py
 
 from .binomial import Binomial
 
 from .gaussian import Gaussian
+```
 
 ```
 Writing distributions/__init__.py 
@@ -31,6 +33,7 @@ Writing distributions/__init__.py
 
 setup.py function giving all necessary information about the package. It uses setuptools library to create package name, version, description, author name, etc. We have to create this file outside the distribution folder.
 
+```python
 %%writefile setup.py
 
 from setuptools import setup
@@ -50,18 +53,19 @@ setup(name='distributions',
    zip_safe=False)
 
 ```
+```
 Writing setup.py 
 ```
 
 # Directory
 
-You can see how your directory should look like.
+The image below shows the package directory contain all required files.
 
 ![Picture title](Images/image-20210724-124844.png)
 
 # Installing distributions Package
 
-Let's install the package by going into the Linux terminal and going into the work directory by using a cd. Then, use `pip install .` or `pip install -U .`
+Using `pip install .` or `pip install -U .` to install the python package which we can use in any project. As we can see our distribution package is successfully installed.
 
 ```
 (venv) root@deepnote:~/work # pip install -U .
@@ -81,7 +85,7 @@ Successfully installed distributions-0.2
 
 # Testing our Package
 
-Let's test our package directly from the terminal and it seems like everything is working fine. Well done you have created your first python package.
+We will be running Python kernel within Linius terminal and then test  both classes. Well done you have created your first python package.
 
 ```
 >>> from distributions import Gaussian
